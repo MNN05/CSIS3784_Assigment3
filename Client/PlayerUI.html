@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laser Tag Treasure Hunt</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!--Player game page-->
+      <div id="player-game-page" class="page active">
+        <div class="phone-screen">
+          <h2 class="neon-text">Player View</h2>
+          <div class="camera-feed">
+            <p>Camera feed goes here...</p>
+            <video id="video" height="200px" width="200px" autoplay playsinline></video>
+            <canvas id="canvasOutput"></canvas>
+          </div>
+          <div class="hud">
+            <div class="stats">
+              <span id="player-health">Health: 100</span>
+              <span id="player-ammo">Ammo: 30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../Server/app.js"></script>
+    <script async src="https://docs.opencv.org/master/opencv.js" type="text/javascript"></script>
+    <script src="../Server/colorDetection.js"></script>
+    <script src="../Server/camera.js"></script>
+  </body>
