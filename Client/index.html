@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laser Tag Treasure Hunt</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!--Start page-->
+      <div id="starter-page" class="page active">
+        <h1 class="neon-text">Laser Tag Treasure Hunt</h1>
+        <p>Ready to play?</p>
+        <button onclick="showPage('enter-username-page')">Start</button>
+      </div>
+
+      <!--Enter username page-->
+      <div id="enter-username-page" class="page">
+        <h2 class="neon-text">Enter your username</h2>
+        <input type="text" id="username-input" placeholder="Your name..." />
+        <div class="button-group">
+          <button onclick="startGameAs('player')">Start as Player</button>
+          <button onclick="startGameAs('spectator')">Start as Spectator</button>
+        </div>
+      </div>
+
+      <!--Enter game code page-->
+      <div id="enter-code-page" class="page">
+        <h2 class="neon-text">Enter game code</h2>
+        <input type="text" id="game-code-input" placeholder="Game code..." />
+        <button onclick="joinLobby()">Join Lobby</button>
+      </div>
+
+      <!--Waiting lobby page-->
+      <div id="waiting-lobby-page" class="page">
+        <h2 class="neon-text">Waiting Lobby</h2>
+        <p>Waiting for other players...</p>
+        <div class="loader"></div>
+        <p>Game Code: <span id="lobby-code"></span></p>
+      </div>
+
+      <!--Player game page-->
+      <div id="player-game-page" class="page">
+        <div class="phone-screen">
+          <h2 class="neon-text">Player View</h2>
+          <div class="camera-feed">
+            <p>Camera feed goes here...</p>
+          </div>
+          <div class="hud">
+            <div class="stats">
+              <span id="player-health">Health: 100</span>
+              <span id="player-ammo">Ammo: 30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Spectator page-->
+      <div id="spectator-page" class="page">
+        <h2 class="neon-text">Live Leaderboard</h2>
+        <div class="stats-container">
+          <ul id="player-stats-list"></ul>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

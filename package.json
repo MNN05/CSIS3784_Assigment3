@@ -1,0 +1,25 @@
+{
+  "name": "csis3784_assigment3",
+  "version": "1.0.0",
+  "description": "This a redo for the project done at BBD VAC work 2025",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MNN05/CSIS3784_Assigment3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MNN05/CSIS3784_Assigment3/issues"
+  },
+  "homepage": "https://github.com/MNN05/CSIS3784_Assigment3#readme"
+}
