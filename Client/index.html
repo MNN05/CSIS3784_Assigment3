@@ -14,7 +14,7 @@
     <div class="container">
       <!--Start page-->
       <div id="starter-page" class="page active">
-        <h1 class="neon-text">Laser Tag Treasure Hunt</h1>
+        <h1 class="neon-text">Laser Tag</h1>
         <p>Ready to play?</p>
         <button onclick="showPage('enter-username-page')">Start</button>
       </div>
@@ -50,6 +50,7 @@
           <h2 class="neon-text">Player View</h2>
           <div class="camera-feed">
             <p>Camera feed goes here...</p>
+            <video></video>
           </div>
           <div class="hud">
             <div class="stats">
@@ -68,6 +69,9 @@
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="../Server/app.js"></script>
+    <script async src="https://docs.opencv.org/master/opencv.js" type="text/javascript"></script>
+    <script src="../Server/colorDetection.js"></script>
+    <script src="../Server/camera.js"></script>
   </body>
 </html>
